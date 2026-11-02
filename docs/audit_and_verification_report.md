@@ -1,7 +1,7 @@
 # Evidence-Based Audit & Verification Report (CVOD01)
 *Post-Audit Numerical & Mathematical Reconciliation Edition*
 
-**Role:** Senior Computer Vision Engineer & ML Experiment Auditor  
+**Role:** Computer Vision Engineer 
 **Scope:** Verification and mathematical reconciliation of all data, code, configurations, logs, checkpoints, metrics, and claims for the SeaShips Maritime Vessel Perception Project.  
 **Audit Date:** October 2026  
 **Primary Source Artifact:** `outputs/results/reconciled_evaluation_audit.json`
