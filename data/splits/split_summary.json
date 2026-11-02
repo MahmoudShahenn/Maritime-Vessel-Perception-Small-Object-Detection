@@ -1,0 +1,33 @@
+{
+  "split_counts": {
+    "train": 4900,
+    "val": 1050,
+    "test": 1050
+  },
+  "classes_per_split": {
+    "train": {
+      "ore carrier": 1356,
+      "passenger ship": 334,
+      "general cargo ship": 1285,
+      "bulk cargo carrier": 1107,
+      "container ship": 754,
+      "fishing boat": 1029
+    },
+    "val": {
+      "ore carrier": 255,
+      "passenger ship": 72,
+      "bulk cargo carrier": 338,
+      "container ship": 31,
+      "fishing boat": 366,
+      "general cargo ship": 120
+    },
+    "test": {
+      "ore carrier": 473,
+      "container ship": 113,
+      "bulk cargo carrier": 366,
+      "general cargo ship": 21,
+      "fishing boat": 144,
+      "passenger ship": 49
+    }
+  }
+}

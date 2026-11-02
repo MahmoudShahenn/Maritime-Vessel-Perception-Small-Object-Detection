@@ -1,0 +1,113 @@
+{
+  "experiment_name": "baseline_test_eval",
+  "model_checkpoint": "outputs\\models\\baseline_yolov8s_640_best.pt",
+  "split": "test",
+  "imgsz": 640,
+  "conf_threshold": 0.25,
+  "iou_threshold": 0.6,
+  "device": "0",
+  "overall_metrics": {
+    "precision": 0.9355120935527719,
+    "recall": 0.8491902019676969,
+    "f1": 0.890263548391197,
+    "map50": 0.9021300202450453,
+    "map50_95": 0.6372001812575788
+  },
+  "per_class_metrics": {
+    "ore carrier": {
+      "precision": 0.9555106998360748,
+      "recall": 0.836207232446257,
+      "f1": 0.8918869862573563,
+      "ap50": 0.9047673615426615,
+      "ap50_95": 0.5157462202651576
+    },
+    "bulk cargo carrier": {
+      "precision": 0.9457637783385153,
+      "recall": 0.7,
+      "f1": 0.8045317918986653,
+      "ap50": 0.7714863737005451,
+      "ap50_95": 0.5596072389169608
+    },
+    "general cargo ship": {
+      "precision": 0.9110207170471096,
+      "recall": 0.975630543472321,
+      "f1": 0.9422193186157889,
+      "ap50": 0.9777122153209108,
+      "ap50_95": 0.7235794241989894
+    },
+    "container ship": {
+      "precision": 0.9974162184503399,
+      "recall": 0.9646017699115044,
+      "f1": 0.9807345808845133,
+      "ap50": 0.965,
+      "ap50_95": 0.7252434553167177
+    },
+    "fishing boat": {
+      "precision": 0.8286742863727654,
+      "recall": 0.8327526132404182,
+      "f1": 0.8307084392448235,
+      "ap50": 0.8723095197433638,
+      "ap50_95": 0.5781802703649654
+    },
+    "passenger ship": {
+      "precision": 0.9746868612718259,
+      "recall": 0.7859490527356812,
+      "f1": 0.870201732095567,
+      "ap50": 0.9215046511627908,
+      "ap50_95": 0.7208444784826815
+    }
+  },
+  "size_breakdown": {
+    "small": {
+      "gt_instances": 0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "medium": {
+      "gt_instances": 21,
+      "true_positives": 11,
+      "false_positives": 13,
+      "false_negatives": 7,
+      "precision": 0.4583333331423611,
+      "recall": 0.611111110771605,
+      "f1": 0.5238095186621315
+    },
+    "large": {
+      "gt_instances": 315,
+      "true_positives": 302,
+      "false_positives": 61,
+      "false_negatives": 16,
+      "precision": 0.8319559228420949,
+      "recall": 0.9496855345613306,
+      "f1": 0.886930978843068
+    }
+  },
+  "latency_profile": {
+    "preprocess_ms": 2.042547999662929,
+    "inference_ms": 11.922179999819491,
+    "postprocess_ms": 2.143289999803528,
+    "total_latency_ms": 24.858144000099855,
+    "fps": 40.22826482926412
+  },
+  "saved_error_samples": [
+    "error_000163_fpTrue_fnFalse.jpg",
+    "error_000167_fpTrue_fnTrue.jpg",
+    "error_000168_fpTrue_fnTrue.jpg",
+    "error_000169_fpTrue_fnTrue.jpg",
+    "error_000319_fpTrue_fnFalse.jpg",
+    "error_000321_fpTrue_fnFalse.jpg",
+    "error_000322_fpTrue_fnFalse.jpg",
+    "error_000323_fpTrue_fnFalse.jpg",
+    "error_000324_fpTrue_fnFalse.jpg",
+    "error_000325_fpTrue_fnTrue.jpg",
+    "error_000349_fpTrue_fnFalse.jpg",
+    "error_000353_fpTrue_fnTrue.jpg",
+    "error_000355_fpFalse_fnTrue.jpg",
+    "error_000356_fpFalse_fnTrue.jpg",
+    "error_000358_fpFalse_fnTrue.jpg"
+  ]
+}

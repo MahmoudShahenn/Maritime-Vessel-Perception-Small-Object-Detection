@@ -1,0 +1,58 @@
+# Baseline Experiment Configuration (CVOD01)
+# Architecture: YOLOv8s (or YOLO11s)
+# Focus: Real-time maritime surveillance baseline on 1920x1080 coastal camera feeds
+
+task: detect
+mode: train
+model: yolov8s.pt
+data: configs/dataset.yaml
+
+# Training hyperparameters
+epochs: 25
+batch: 16
+imgsz: 640
+device: 0               # NVIDIA RTX 3050 Laptop GPU
+workers: 2
+patience: 10
+save: true
+save_period: -1
+cache: false
+exist_ok: true
+pretrained: true
+optimizer: auto
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Maritime-Specific Augmentations
+# Physical rationale:
+# - fliplr: 0.5 -> Ships can navigate in either heading (left-to-right or right-to-left).
+# - flipud: 0.0 -> Strictly disabled. Inverted ships are unphysical in real maritime ops.
+# - scale: 0.5 -> Scale jittering simulates vessels at diverse distances (near harbor to horizon).
+# - hsv_v / hsv_s -> Simulates maritime illumination shifts (sun glare, cloudy, haze, dusk).
+# - degrees: 2.0 -> Minor camera mast vibration / buoy tilt; avoids extreme pitch/roll.
+# - mosaic: 1.0 -> High multi-scale representation.
+# - mixup: 0.0 -> Avoid phantom ships blending into open ocean.
+fliplr: 0.5
+flipud: 0.0
+degrees: 2.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+hsv_h: 0.015
+hsv_s: 0.4
+hsv_v: 0.4
+mosaic: 1.0
+mixup: 0.0
+copy_paste: 0.0
+
+# Inference & Validation Defaults
+conf: 0.25
+iou: 0.6
+max_det: 300
+

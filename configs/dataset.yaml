@@ -1,0 +1,13 @@
+# SeaShips YOLO Dataset Configuration (CVOD01)
+path: C:/Users/RAM/Desktop/SeaShips/data/processed
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: ore carrier
+  1: bulk cargo carrier
+  2: general cargo ship
+  3: container ship
+  4: fishing boat
+  5: passenger ship

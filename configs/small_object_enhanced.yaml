@@ -1,0 +1,56 @@
+# Small-Object Enhanced Experiment Configuration (CVOD01)
+# Architecture: YOLOv8s with High-Resolution Input (800px) and Small-Object Loss Weighting
+# Focus: Distant, small, low-contrast maritime vessel detection
+
+task: detect
+mode: train
+model: yolov8s.pt
+data: configs/dataset.yaml
+
+# Training hyperparameters
+epochs: 25
+batch: 8                # Adjusted for 800px input on 4GB VRAM
+imgsz: 800              # 1.56x pixel area boost preserves distant small targets
+device: 0               # NVIDIA RTX 3050 Laptop GPU
+workers: 2
+patience: 10
+save: true
+save_period: -1
+cache: false
+exist_ok: true
+pretrained: true
+optimizer: auto
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Loss weighting enhancements for localization accuracy
+box: 8.5                # Prioritize precise boundary delineation on small vessels
+cls: 0.5
+dfl: 1.5
+
+# Augmentations
+fliplr: 0.5
+flipud: 0.0
+degrees: 2.0
+translate: 0.1
+scale: 0.6              # Increased scale variation to include smaller instances
+shear: 0.0
+perspective: 0.0
+hsv_h: 0.015
+hsv_s: 0.5
+hsv_v: 0.5
+mosaic: 1.0
+close_mosaic: 5         # Disable mosaic for last 5 epochs for clean fine-tuning
+mixup: 0.0
+copy_paste: 0.0
+
+# Evaluation
+conf: 0.20              # Lower operating threshold for sensitivity to small/distant targets
+iou: 0.6
+max_det: 300
+

@@ -1,0 +1,49 @@
+{
+  "dataset_name": "SeaShips(7000)",
+  "total_xml_files": 7000,
+  "total_images_found": 7000,
+  "missing_images_count": 0,
+  "empty_annotations_count": 0,
+  "invalid_bboxes_count": 0,
+  "total_objects": 9221,
+  "mean_objects_per_image": 1.3172857142857144,
+  "max_objects_per_image": 5,
+  "image_resolutions": {
+    "1920x1080": 7000
+  },
+  "class_distribution": {
+    "ore carrier": 2199,
+    "passenger ship": 474,
+    "container ship": 901,
+    "bulk cargo carrier": 1952,
+    "general cargo ship": 1505,
+    "fishing boat": 2190
+  },
+  "size_categories": {
+    "small": 15,
+    "medium": 784,
+    "large": 8422
+  },
+  "bbox_area_stats": {
+    "min": 400.0,
+    "max": 813656.0,
+    "mean": 121306.47185771608,
+    "median": 75570.0,
+    "p10": 10858.0,
+    "p25": 27560.0,
+    "p75": 174542.0,
+    "p90": 296217.0
+  },
+  "bbox_relative_area_stats": {
+    "mean_percent": 5.8500420456074504,
+    "median_percent": 3.644386574074074,
+    "p10_percent": 0.5236304012345679,
+    "p90_percent": 14.28515625
+  },
+  "official_splits": {
+    "test": 3500,
+    "train": 1750,
+    "trainval": 3500,
+    "val": 1750
+  }
+}

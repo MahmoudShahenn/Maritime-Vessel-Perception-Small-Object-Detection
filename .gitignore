@@ -1,0 +1,26 @@
+# Virtual Environment & Python Cache
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Training runs & temporary logs
+runs/
+wandb/
+
+# Datasets and Archives
+*.zip
+*.tar.gz
+data/raw/
+data/processed/
+
+# Models & Weights
+*.pt
+!outputs/models/baseline_yolov8s_640_best.pt
+
+# Video Predictions
+outputs/predictions/*.avi
+outputs/predictions/*.mp4
+!outputs/predictions/demo_output.mp4

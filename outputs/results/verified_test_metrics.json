@@ -1,0 +1,132 @@
+{
+  "dataset_split_audit": {
+    "train": {
+      "image_count": 4900,
+      "total_instances": 6493,
+      "per_class": {
+        "ore carrier": 1456,
+        "bulk cargo carrier": 1158,
+        "general cargo ship": 1363,
+        "container ship": 757,
+        "fishing boat": 1412,
+        "passenger ship": 347
+      }
+    },
+    "val": {
+      "image_count": 1050,
+      "total_instances": 1350,
+      "per_class": {
+        "ore carrier": 255,
+        "bulk cargo carrier": 374,
+        "general cargo ship": 121,
+        "container ship": 31,
+        "fishing boat": 491,
+        "passenger ship": 78
+      }
+    },
+    "test": {
+      "image_count": 1050,
+      "total_instances": 1378,
+      "per_class": {
+        "ore carrier": 488,
+        "bulk cargo carrier": 420,
+        "general cargo ship": 21,
+        "container ship": 113,
+        "fishing boat": 287,
+        "passenger ship": 49
+      }
+    }
+  },
+  "full_test_size_audit": {
+    "coco_scale_metrics": {
+      "small": {
+        "gt_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "medium": {
+        "gt_count": 94,
+        "tp": 58,
+        "fp": 29,
+        "fn": 24,
+        "precision": 0.6666666665900384,
+        "recall": 0.7073170730844736,
+        "f1": 0.6863905274675258
+      },
+      "large": {
+        "gt_count": 1284,
+        "tp": 1163,
+        "fp": 263,
+        "fn": 133,
+        "precision": 0.8155680224346735,
+        "recall": 0.8973765432029525,
+        "f1": 0.8545187312284914
+      }
+    },
+    "maritime_scale_metrics": {
+      "distant_small (<0.5% area)": {
+        "gt_count": 114,
+        "tp": 71,
+        "fp": 41,
+        "fn": 38,
+        "precision": 0.6339285713719707,
+        "recall": 0.6513761467292316,
+        "f1": 0.6425339315943573
+      },
+      "near_large (>=0.5% area)": {
+        "gt_count": 1264,
+        "tp": 1150,
+        "fp": 251,
+        "fn": 119,
+        "precision": 0.8208422555259041,
+        "recall": 0.9062253743033395,
+        "f1": 0.8614232159795508
+      }
+    }
+  },
+  "confidence_threshold_trade_off": {
+    "conf_0.15": {
+      "conf_threshold": 0.15,
+      "precision": 0.9355120935527719,
+      "recall": 0.8491902019676969,
+      "f1_aggregate": 0.890263548391197,
+      "map50": 0.9088139781764792,
+      "map50_95": 0.6407705856454269
+    },
+    "conf_0.25": {
+      "conf_threshold": 0.25,
+      "precision": 0.9355120935527719,
+      "recall": 0.8491902019676969,
+      "f1_aggregate": 0.890263548391197,
+      "map50": 0.9021300202450453,
+      "map50_95": 0.6372001812575788
+    },
+    "conf_0.5": {
+      "conf_threshold": 0.5,
+      "precision": 0.9359427238110486,
+      "recall": 0.8491902019676969,
+      "f1_aggregate": 0.8904584916154498,
+      "map50": 0.8600522731552962,
+      "map50_95": 0.6100437661730129
+    }
+  },
+  "f1_reconciliation": {
+    "aggregate_precision": 0.9355120935527719,
+    "aggregate_recall": 0.8491902019676969,
+    "harmonic_mean_aggregate_f1": 0.890263548391197,
+    "per_class_f1_values": {
+      "ore carrier": 0.8918869862573563,
+      "bulk cargo carrier": 0.8045317918986653,
+      "general cargo ship": 0.9422193186157889,
+      "container ship": 0.9807345808845133,
+      "fishing boat": 0.8307084392448235,
+      "passenger ship": 0.870201732095567
+    },
+    "macro_averaged_f1": 0.8867138081661191,
+    "formula_explanation": "harmonic_mean_aggregate_f1 (89.03%) is 2 * (P_agg * R_agg) / (P_agg + R_agg). macro_averaged_f1 (88.67%) is the unweighted arithmetic mean of individual per-class F1 values."
+  }
+}
